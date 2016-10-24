@@ -116,7 +116,8 @@ if __name__ == "__main__":
              <head>
                 <style>
                     table {
-                        font-size: 15px;
+                        font-size: 13px;
+                        font-family: "Comic Sans MS", cursive, sans-serif;
                         border-collapse: collapse;
                     }
                     table, th, td {
@@ -126,9 +127,15 @@ if __name__ == "__main__":
                 </style>
              </head>
           <body>
-          <table cellpadding='5' style='text-align: center;'>
-                <tr><th colspan='9'>%s</th></tr>
+          <div style="text-align: center;">
+            <h2>Kendriya Vidayalaya No.1 Sector 30, Gandhinagar</h3>
+            <h3>TimeTable Session 2016-17</h3>
+            <h4>%s</h4>
+          </div>
+          <br />
+          <table style='text-align: center; margin-left: auto; margin-right: auto;'>
                 <tr>
+                    <th>Sr No.</th>
                     <th>Teacher Name</th>
                     <th>1</th>
                     <th>2</th>
@@ -140,15 +147,26 @@ if __name__ == "__main__":
                     <th>8</th>
                 </tr>
           """ % (today)
+    cnt = 1
     for teacher in ordered_teachers:
-        if teacher not in daywise[today]:
-            continue
-        print "<tr>",
-        print "<td>" + teacher + "[" + main_dict[teacher]["designation"] + "]</td>"
+        tr_string = ""
+        tr_string += "\n\t<td>%d.</td>\n" % cnt
+        cnt += 1
+        tr_string += "\t<td>" + teacher + " [" + main_dict[teacher]["designation"] + "]</td>\n"
         for period in xrange(1, 9):
-            print "<td>"
-            if daywise[today][teacher].has_key(period):
-                print daywise[today][teacher][period]
-            print "</td>"
-    print "</tr></table></body></html>"
+            tr_string += "\t<td>"
+            if teacher in daywise[today]:
+                if daywise[today][teacher].has_key(period):
+                    tr_string += daywise[today][teacher][period]
+            tr_string += "</td>\n"
+        print "<tr>%s</tr>" % tr_string
+    print "</table>"
+    print """
+<br /><br /><br /><br /><br />
+<div>
+     <div style="float: left;">I/C TimeTable</div>
+     <div style="float: right;">Principal</div>
+</div>
+          """
+    print "</body></html>"
     sys.stdout = prev

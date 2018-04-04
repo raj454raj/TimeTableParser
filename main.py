@@ -122,14 +122,14 @@ if __name__ == "__main__":
                     }
                     table, th, td {
                         border: 1px solid black;
-                        padding: 3px;
+                        padding: 2px;
                     }
                 </style>
              </head>
           <body>
           <div style="text-align: center;">
             <h2>Kendriya Vidayalaya No.1 Sector 30, Gandhinagar</h3>
-            <h3>TimeTable Session 2016-17</h3>
+            <h3>TimeTable Session 2018-19</h3>
             <h4>%s</h4>
           </div>
           <br />
@@ -152,7 +152,7 @@ if __name__ == "__main__":
         tr_string = ""
         tr_string += "\n\t<td>%d.</td>\n" % cnt
         cnt += 1
-        tr_string += "\t<td>" + teacher + " [" + main_dict[teacher]["designation"] + "]</td>\n"
+        tr_string += "\t<td style='text-align: left;'>" + teacher + " [" + main_dict[teacher]["designation"] + "]</td>\n"
         for period in xrange(1, 9):
             tr_string += "\t<td>"
             if teacher in daywise[today]:

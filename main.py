@@ -129,8 +129,7 @@ if __name__ == "__main__":
           <body>
           <div style="text-align: center;">
             <h2>Kendriya Vidayalaya No.1 Sector 30, Gandhinagar</h3>
-            <h3>TimeTable Session 2018-19</h3>
-            <h4>%s</h4>
+            <h3>TimeTable Session 2018-19 (%s)</h3>
           </div>
           <br />
           <table style='text-align: center; margin-left: auto; margin-right: auto;'>

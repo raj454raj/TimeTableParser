@@ -117,7 +117,7 @@ if __name__ == "__main__":
                 <style>
                     table {
                         font-size: 13px;
-                        font-family: "Comic Sans MS", cursive, sans-serif;
+                        font-family: sans-serif;
                         border-collapse: collapse;
                     }
                     table, th, td {

@@ -122,14 +122,15 @@ if __name__ == "__main__":
                     }
                     table, th, td {
                         border: 1px solid black;
-                        padding: 2px;
+                        padding: 4px;
                     }
                 </style>
              </head>
           <body>
           <div style="text-align: center;">
             <h2>Kendriya Vidayalaya No.1 Sector 30, Gandhinagar</h3>
-            <h3>TimeTable Session 2018-19 (%s)</h3>
+            <h3>TimeTable Session 2019-20 (%s)</h3>
+            <p>As on 8th July, 2019</p>
           </div>
           <br />
           <table style='text-align: center; margin-left: auto; margin-right: auto;'>
